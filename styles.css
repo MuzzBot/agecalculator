@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    padding: 40px 20px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.age-calculator {
+    padding: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.input-group input {
+    font-size: 32px;
+    padding: 12px;
+    border: 2px solid hsl(0, 0%, 86%);
+    border-radius: 8px;
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: hsl(259, 100%, 65%);
+    box-shadow: 0 0 8px rgba(100, 50, 200, 0.2);
+    outline: none;
+}
+
+.calculate-btn {
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-btn:hover {
+    background-color: hsl(259, 100%, 70%);
+    transform: scale(1.05);
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.result {
+    margin-top: 40px;
+    font-size: 48px;
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
+    line-height: 1.2;
+    text-align: left;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.result p {
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0;
+    font-weight: 800;
+}
+
+.result span {
+    color: hsl(259, 100%, 65%);
+    margin-right: 10px;
+    font-size: 64px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Animation for smooth updates */
+}
+
+.result span:hover {
+    transform: scale(1.1); /* Enlarges the number slightly on hover */
+    color: hsl(259, 100%, 70%);
+}
+
+.attribution {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: hsl(0, 1%, 44%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
